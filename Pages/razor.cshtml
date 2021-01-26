@@ -1,0 +1,24 @@
+﻿@page
+@model RazorModel
+@{
+
+}
+
+<div>
+    <h2 class="page-title">Razor</h2>
+    <h3>Information</h3>
+    <p><b>Datum/klockslag:</b> @DateTime.Now</p>
+    <p>@(DateTime.Now.DayOfWeek.ToString()=="Monday" ? "Idag är det Måndag" : "Idag är det inte Måndag")</p>
+    <p><b>Kurser jag läst</b></p>
+
+    <ul class="courses">
+        @foreach (var course in Model.Courses)
+        {
+            <li>@course.CourseCode &nbsp; @course.CourseName</li>
+        }
+    </ul>
+</div>
+
+<script>
+    setActive("razor")
+</script>

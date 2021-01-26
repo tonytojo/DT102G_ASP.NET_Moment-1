@@ -1,0 +1,189 @@
+﻿*{
+    box-sizing:border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #e4e4e4;
+    padding:1em;
+}
+
+
+.site-name {
+    font-size: 2.7em;
+    margin-top:0;
+}
+
+.page-title {
+    margin-top: 0;
+    font-size:2em;
+}
+
+.date-now{
+    font-size:1.1em;
+}
+
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.wrapper-inner {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+.header {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    overflow: auto;
+    padding: 1em;
+    border: 1px solid #000;
+    justify-content: space-between;
+    color: #fff;
+    background-image: url('../images/bettan.jpg');
+    height: 300px;
+    background-size: 100%;
+    background-size: cover;
+    margin-bottom:1em;
+}
+
+.flex {
+    display: flex;
+}
+
+.logo {
+    height: 73px;
+    width: 100px;
+}
+
+
+#content {
+    margin: 0 1em;
+    width: 700px;
+    padding: 0.5em;
+}
+
+.menu {
+    width:150px;
+    padding:0.5em;
+}
+
+.menu a {
+display: block;
+padding: 10px;
+color: #000;
+text-align: center;
+text-decoration:none;
+}
+
+.menu > ul > li {
+    margin-bottom: 0.5em;
+    border:1px solid #d6d6d6;
+}
+
+ul{
+    padding:0;
+    margin:0;
+    list-style:none;
+}
+
+.sidebar-ul {
+    white-space: nowrap;
+    padding: 0;
+}
+
+.sidebar-ul a:hover {
+    background-color: #000;
+    color:#fff;
+}
+
+.active {
+    background-color: #403fef;
+    color: #fff;
+}
+
+.active a {
+    color: #fff;
+}
+
+#toggle-menu {
+    height: 70%;
+    display: none;
+    outline: none;
+    border: none;
+    position:relative;
+    top:-300px;
+}
+
+.footer {
+    margin-top: 0.5em;
+    border: 1px solid #000;
+    padding: 1em;
+    text-align: center;
+    justify-content: center;
+    background: #007cc1;
+    color: #fff;
+    margin-bottom:1em;
+}
+
+.footer p
+{
+    margin:0.5em;
+}
+
+.courses li {
+    margin-bottom: 0.3em;
+}
+
+        /* Media queries */
+@media screen and (max-width: 850px) {
+    /* The button where you can toogle the hamburgermenu */
+    #toggle-menu {
+        position: fixed;
+        top: 285px;
+        left: 10px;
+        width: 45px;
+        height: 45px;
+        background: url(../images/hamburger.png) no-repeat 8px 12px;
+        background-size: 35px 35px;
+        width: 48px;
+        text-indent: -9999px;
+        z-index: 999;
+        display: block;
+        outline: none;
+        border: none;
+    }
+
+@media screen and (max-width: 640px) {
+    footer.flex, section, .header {
+        flex-direction: column;
+    }
+
+    .menu{
+        width:100%;
+        text-align:center;
+    }
+
+    #content{
+        width:auto;
+    }
+
+    .site-name {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .date-now {
+        position:absolute;
+        right:0;
+        padding-right:1em;
+    }     
+}

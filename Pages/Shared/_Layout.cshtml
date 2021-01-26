@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DT102G_Moment_1</title>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper-inner">
+            <header class="header flex">
+                <img class="logo" src="~/images/logo.png" />
+                <h1 class="site-name">Hästhoppning</h1>
+                <p class="date-now">Dagens datum är: @DateTime.Now.ToString("yyyy-MM-dd")</p>
+            </header>
+            <button id="toggle-menu">Visa/dölj</button>
+
+            <section class="flex">
+                <nav id="menu" class="menu">
+                    <ul class="sidebar-ul">
+                        <li id="index"> <a href="index">Start</a></li>
+                        <li id="razor"> <a href="razor">Razor</a></li>
+                        <li id="about"> <a href="about">Om sidan</a></li>
+                    </ul>
+                </nav>
+
+                <script src="~/js/main.js" asp-append-version="true"></script>
+
+                <div id="content">
+                    @RenderBody()
+                </div>
+            </section>
+
+            <footer class="flex footer">
+                <p>Av Tony Johansson&nbsp;</p>
+                <p>Kontakta mig via e-post&nbsp;</p>
+                <p>tojo8500@student.miun.se</p>
+            </footer>
+        </div>
+    </div>
+
+
+    @*<div class="wrapper">
+            <div class="wrapper-inner">
+                <header class="header flex">
+                    <img class="logo" src="~/images/logo.png" />
+                    <p>Dagens datum är: @DateTime.Now.ToString("yyyy-MM-dd")</p>
+                </header>
+
+                <button id="toggle-menu">Visa/dölj</button>
+
+                <section class="flex">
+                    <nav id="mainmenu" class="sidebar-nav open">
+                        <ul id="my-ul" class="sidebar-ul">
+
+                            <li id="index"> <a href="index">Start</a></li>
+                            <li id="razor"> <a href="razor">Razor</a></li>
+                            <li id="about"> <a href="about">Om sidan</a></li>
+                        </ul>
+                    </nav>
+
+                    <main class="main">
+                        @RenderBody()
+                    </main>
+                </section>
+
+                <footer class="flex footer">
+                    <p>Av Tony Johansson&nbsp;</p>
+                    <p>Kontakta mig via e-post&nbsp;</p>
+                    <p>tojo8500@student.miun.se</p>
+                </footer>
+            </div>
+        </div>*@
+
+  
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
